@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="parent">
+        <div class="encriptador">
+            <label for="inputNum">Ingrese un numero de cuatro digitos</label>
+            <input type="text" id="inputNum" maxlength="4" onkeyup="validarInput(); limitarLongitud()" onkeypress="filtrarInput(event)" pattern="\d{4}" required>
+            <button onclick="encriptar()" id="boton" disabled>Encriptar</button>
+            <p id="resultado"></p>
+        </div>
+
+        <div class="desencriptador">
+            <label for="inputNumDes">Ingrese un numero de cuatro digitos</label>
+            <input type="number" id="inputNumDes" maxlength="4" onkeyup="validarInputDes(); limitarLongitudDes()" onkeypress="filtrarInputDes(event)" pattern="\d{4}" required>
+            <button  onclick="desencriptar()" id="botonDes" disabled>Desencriptar</button>
+            <p id="resultadoDes"></p>
+        </div>
+
+
+    </div>
+</body>
+</html>
